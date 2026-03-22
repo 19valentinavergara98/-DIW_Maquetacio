@@ -1,0 +1,43 @@
+body {
+  font-family: "Roboto", sans-serif, "Montserrat", sans-serif; /*doble fuente */
+  margin: 0;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+.container-menu {
+  background-color: #ee1f32;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+}
+
+.menu-principal {
+  padding: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.po-menu {
+  list-style: none;
+  background-color: white;
+  padding: 12px 30px;
+  border-radius: 12px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.container-secundario img {
+}
