@@ -1,0 +1,185 @@
+html {
+  font-family: "Roboto", sans-serif, "Montserrat", sans-serif; /*doble fuente */
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+/*nav*/
+.nav-menu {
+  background-color: #ee1f32;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-menu img {
+  width: 100px; /* Ancho del nav */
+  height: auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* separación entre logo y texto */
+}
+
+.logo-container h1 {
+  margin: 0; /* elimina espacio raro */
+  color: white;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 900; /* con esto le doy especie de bold a la letras*/
+}
+
+.ul-menu {
+  padding: 10px;
+  list-style: none;
+  /*creo que esto no esta bien*/
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 20px;
+}
+
+.li-menu {
+  list-style: none;
+  background-color: white;
+  padding: 12px 30px;
+  border-radius: 12px;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.container-secundario {
+  position: relative;
+  width: 100%;
+}
+.container-secundario img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(
+    0.6
+  ); /* esto genera un filtro oscuro para resaltar el parrafo*/
+}
+
+.text-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.text-img p {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/*reserva confirmada*/
+.mensaje {
+  width: 300px;
+  margin: 100px auto; /* centra horizontal */
+
+  text-align: center;
+  padding: 20px;
+
+  border: 2px solid #808000;
+  border-radius: 10px;
+}
+
+/* texto */
+.mensaje p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* botón */
+.btn-regresar {
+  display: inline-block;
+  padding: 10px 20px;
+
+  background-color: #808000;
+  color: white;
+
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* hover */
+.btn-regresar:hover {
+  background-color: #ffffff;
+  color: #808000;
+  border: 2px solid #808000;
+}
+
+/*footer*/
+.footer {
+  background-color: #ee1f32;
+  color: #d6f5c3;
+  padding: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*eesto alinea los items */
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-col {
+  flex: 1;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-item i,
+.footer-item span.material-symbols-outlined {
+  font-size: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-logo img {
+  width: 80px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* on estem */
+.footer h2 {
+  margin-bottom: 15px;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 0.9rem;
+}

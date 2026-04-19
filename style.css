@@ -1,29 +1,55 @@
-body {
-  font-family: "Roboto", sans-serif, "Montserrat", sans-serif; /*doble fuente */
-  margin: 0;
+html {
+  font-family:
+    "Roboto", sans-serif, "Montserrat", sans-serif; /*doble fuente en caso de que alguna falle*/
+  font-size: 16px;
 }
 
-header {
+body {
   margin: 0;
   padding: 0;
 }
 
-.container-menu {
+.nav-menu {
   background-color: #ee1f32;
   position: sticky;
   top: 0;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
 
-.menu-principal {
+.nav-menu img {
+  width: 100px; /* Ancho del nav */
+  height: auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* separación entre logo y texto */
+}
+
+.logo-container h1 {
+  margin: 0; /* elimina espacio raro */
+  color: white;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 900; /* con esto le doy especie de bold a la letras*/
+}
+
+.ul-menu {
   padding: 10px;
   list-style: none;
+  /*creo que esto no esta bien*/
   display: flex;
   justify-content: flex-end;
+
   gap: 20px;
 }
 
-.po-menu {
+.li-menu {
   list-style: none;
   background-color: white;
   padding: 12px 30px;
@@ -39,5 +65,282 @@ header {
   text-decoration: underline;
 }
 
+.container-secundario {
+  position: relative;
+  width: 100%;
+}
 .container-secundario img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(
+    0.6
+  ); /* esto genera un filtro oscuro para resaltar el parrafo*/
+}
+
+.text-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.text-img h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* boton reservar*/
+.boton-sticky {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background-color: #808000;
+  color: white;
+
+  padding: 12px 25px;
+  border-radius: 20px;
+
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.boton-sticky:hover {
+  background-color: #ffffff; /* cambia el color del botony letra*/
+  color: #808000;
+  border: 2px solid #808000; /*le añado borde al boton para que mantenga blanco pero resalte*/
+}
+
+/*sección sobre nosotros*/
+
+.sobre-nosotros {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.sobre-nosotros h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.contenido-fila {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.img-nosotros {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.presentacion {
+  max-width: 500px;
+  border: 2px solid #ee1f32;
+  border-radius: 10px;
+}
+
+.presentacion p {
+  font-size: 1.1rem;
+  line-height: 1.6; /*espacio interlineado*/
+  padding: 20px;
+}
+
+/*galeria de imagenes bar*/
+
+.galeria {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.galeria h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.galeria-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 10px; /* le doy mas espacio de altura que de ancho*/
+}
+
+/* contenedor imagenes */
+.img {
+  flex: 1;
+  min-width: 200px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  border: 2px solid #ee1f32;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.img:nth-child(1) img,
+.img:nth-child(4) img,
+.img:nth-child(5) img,
+.img:nth-child(8) img {
+  filter: brightness(0.6); /* filtro oscuro para las imagenes*/
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(255, 12, 12, 0.789); /*cuando paso por encima se ilumina la imagen*/
+}
+
+/*seccion reservar dia y hora */
+
+.reserva {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.reserva h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.contingut {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.rellenar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ee1f32;
+}
+
+/* botón */
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #808000;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 20px;
+  right: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 2px solid #808000;
+  margin-top: 15px;
+}
+
+/*footer*/
+.footer {
+  background-color: #ee1f32;
+  color: #d6f5c3;
+  padding: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /*eesto alinea los items */
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-col {
+  flex: 1;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-item i,
+.footer-item span.material-symbols-outlined {
+  font-size: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-logo img {
+  width: 80px;
+}
+
+a {
+  text-decoration: none; /*utilizar esto para quitar marca de link*/
+  color: inherit;
+}
+
+/* on estem */
+.footer h2 {
+  margin-bottom: 15px;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/*parte responsive*/
+/*haré esto cuando la pantalla sea menos a:*/
+@media (max-width: 768px) {
+  /*nav*/
+  .nav-menu {
+    flex-direction: column; /*ponlos en columna logo y debajo menu*/
+    gap: 10px;
+  }
+
+  .ul-menu {
+    flex-direction: column; /*que la lista aparezca en forma de columna una debajo de la otra*/
+  }
+
+  /*sobre nosotros*/
+  .contenido-fila {
+    flex-direction: column; /* que aparezca el texto debajo de la img*/
+  }
+
+  /*formulario reserva*/
+  .contingut {
+    flex-direction: column; /*todo los inputs y labels en columna*/
+  }
+
+  /* footer */
+  .footer-content {
+    flex-direction: column; /*el contenido:links, iconos, aparezcan en columna*/
+  }
 }

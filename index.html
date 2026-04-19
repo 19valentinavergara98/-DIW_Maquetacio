@@ -6,29 +6,221 @@
     <title>Alevoso Bar</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="torre.png" type="img/png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
   <body>
-    <header>
-      <nav class="container-menu">
-        <ul class="menu-principal">
-          <li class="po-menu">
-            <a class="link" href="url">Nosaltres</a>
+    <header class="header-menu">
+      <nav class="nav-menu">
+        <div class="logo-container">
+          <a href="index.html">
+            <img src="result_torre.png" alt="logo bar" />
+          </a>
+          <h1>Alevoso Bar</h1>
+        </div>
+
+        <ul class="ul-menu">
+          <li class="li-menu">
+            <a class="link" href="#sobre-nosotros">Nosaltres</a>
           </li>
-          <li class="po-menu">
+          <li class="li-menu">
             <a class="link" href="url">Carta</a>
           </li>
-          <li class="po-menu">
+          <li class="li-menu">
             <a class="link" href="url">Galeria</a>
           </li>
         </ul>
       </nav>
       <div class="container-secundario">
-        <img src="img/imagenAlevoso.jpg" alt="Fotografía de bar" />
-        <div class="hero-text">
-          <h1>alevoso Bar</h1>
-          <p>de momento nada</p>
+        <img
+          src="img/imagenAlevosoExterior.jpg"
+          alt="Fotografía de bar exterior"
+        />
+        <div class="text-img">
+          <h2>Bar de barri</h2>
         </div>
       </div>
     </header>
+    <main>
+      <section id="sobre-nosotros" class="sobre-nosotros">
+        <h2>Sobre nosaltres</h2>
+
+        <div class="contenido-fila">
+          <img
+            src="img/sobrenosotros.jpeg"
+            alt="Interior del bar"
+            class="img-nosotros"
+          />
+
+          <div class="presentacion">
+            <p>
+              Som dos joves emprenedors que decidim convertir una passió en
+              realitat: obrir un bar de barri a Barcelona, però no en qualsevol
+              barri, sinó en el Clot, un barri amb ànima, història i aquesta
+              essència de barri autèntic que ens inspira cada dia. Apostem pel
+              local, per la nostra gent i per crear un espai on tothom se senti
+              com a casa. Creiem en el valor del barri, a conèixer-nos pel nom i
+              a compartir alguna cosa més que una beguda: moments únics.
+            </p>
+          </div>
+        </div>
+
+        <div class="contenido-fila">
+          <div class="presentacion">
+            <p>
+              L'hostaleria no és només el nostre treball, és el que ens mou. Ens
+              apassiona cuidar cada detall perquè cada experiència sigui
+              especial.
+            </p>
+            <p>
+              Alevoso Bar neix amb il·lusió, esforç i moltes ganes de formar
+              part del teu dia a dia. Perquè més que un bar, volem ser el teu
+              lloc de vermut.
+            </p>
+          </div>
+
+          <img
+            src="img/pagavostehagobizum.jpeg"
+            alt="Cartel en el bar"
+            class="img-nosotros"
+          />
+        </div>
+      </section>
+
+      <section class="galeria">
+        <h2>Galeria d'imatges</h2>
+
+        <div class="galeria-contenido">
+          <div class="img">
+            <img src="img/ohMyClot.jpeg" alt="ilustracion con logo de bar" />
+          </div>
+          <div class="img">
+            <img
+              src="img/bocadilloyvermut.jpeg"
+              alt="imagen bocadillo y vermut"
+            />
+          </div>
+          <div class="img">
+            <img src="img/sirvase.jpeg" alt="ilustracion sirvase usted mismo" />
+          </div>
+          <div class="img">
+            <img src="img/interioBar.jpeg" alt="fotografía interior bar" />
+          </div>
+          <div class="img">
+            <img
+              src="img/conservas.jpeg"
+              alt="ilustracion conserva de amistad"
+            />
+          </div>
+          <div class="img">
+            <img src="img/cartel.jpeg" alt="fotografía cartel con logo bar" />
+          </div>
+          <div class="img">
+            <img src="img/vasoVermut.jpeg" alt="ilustracion vaso de vermut" />
+          </div>
+          <div class="img">
+            <img
+              src="img/pagavostehagobizum.jpeg"
+              alt="fotografía de camamero colgando cartel"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="reserva" class="reserva">
+        <h2>Reserva</h2>
+
+        <form class="form-reserva">
+          <div class="contingut">
+            <div class="rellenar">
+              <label for="nombre">Nom</label>
+              <input type="text" id="nombre" />
+            </div>
+
+            <div class="rellenar">
+              <label for="numero">Número de persones</label>
+              <input type="number" id="numero" />
+            </div>
+          </div>
+
+          <div class="contingut">
+            <div class="rellenar">
+              <label for="data">Data</label>
+              <input type="date" id="data" />
+            </div>
+
+            <div class="rellenar">
+              <label for="hora">Hora</label>
+              <input type="time" id="hora" />
+            </div>
+          </div>
+
+          <div class="rellenar">
+            <label for="descripcion">Descripció</label>
+            <textarea
+              placeholder=" Ejemplo restriccions alimentàries"
+              id="descripcion"
+            ></textarea>
+          </div>
+
+          <div class="btn-container">
+            <button
+              type="button"
+              onclick="window.location.href = 'reservaOk.html'"
+            >
+              Reservar
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <a href="#reserva" class="boton-sticky">Reservar</a>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h2>On estem?</h2>
+          <p>Carrer del Clot, 64<br />Barcelona</p>
+          <a
+            href="https://maps.app.goo.gl/yw6NVSaJfh8uhTYe7"
+            target="_blank"
+            class="footer-item"
+          >
+            <i class="fa-solid fa-location-dot"></i>
+            Ver ubicación
+          </a>
+        </div>
+        <div class="footer-col footer-logo">
+          <a href="index.html">
+            <img src="result_torre.png" alt="logo bar" />
+          </a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+34 603 026 563</span>
+          </div>
+          <div class="footer-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>alevoso.bar@gmail.com</span>
+          </div>
+          <a
+            href="https://www.instagram.com/alevoso.bar/"
+            target="_blank"
+            class="footer-item"
+          >
+            <i class="fa-brands fa-instagram"></i>
+            <span>alevoso.bar</span>
+          </a>
+        </div>
+      </div>
+      <p class="footer-copyright">© Alevoso Bar Barcelona</p>
+    </footer>
   </body>
 </html>
