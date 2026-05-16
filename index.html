@@ -16,37 +16,35 @@
     />
   </head>
   <body>
-    <header class="header-menu">
-      <nav class="nav-menu">
-        <div class="logo-container">
-          <a href="index.html">
-            <img src="result_torre.png" alt="logo bar" />
-          </a>
-          <h1>Alevoso Bar</h1>
-        </div>
-
-        <ul class="ul-menu">
-          <li class="li-menu">
-            <a class="link" href="#sobre-nosotros">Nosaltres</a>
-          </li>
-          <li class="li-menu">
-            <a class="link" href="url">Carta</a>
-          </li>
-          <li class="li-menu">
-            <a class="link" href="url">Galeria</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="container-secundario">
-        <img
-          src="img/imagenAlevosoExterior.jpg"
-          alt="Fotografía de bar exterior"
-        />
-        <div class="text-img">
-          <h2>Bar de barri</h2>
-        </div>
+    <nav class="nav-menu">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="result_torre.png" alt="logo bar" />
+        </a>
+        <h1>Alevoso Bar</h1>
       </div>
-    </header>
+
+      <ul class="ul-menu">
+        <li class="li-menu">
+          <a class="link" href="#sobre-nosotros">Nosaltres</a>
+        </li>
+        <li class="li-menu">
+          <a class="link" href="url">Carta</a>
+        </li>
+        <li class="li-menu">
+          <a class="link" href="url">Galeria</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container-secundario">
+      <img
+        src="img/imagenAlevosoExterior.jpg"
+        alt="Fotografía de bar exterior"
+      />
+      <div class="text-img">
+        <h2>BAR DE BARRI</h2>
+      </div>
+    </div>
     <main>
       <section id="sobre-nosotros" class="sobre-nosotros">
         <h2>Sobre nosaltres</h2>
@@ -129,6 +127,34 @@
               src="img/pagavostehagobizum.jpeg"
               alt="fotografía de camamero colgando cartel"
             />
+          </div>
+        </div>
+      </section>
+
+      <section class="video">
+        <h2>Una miqueta de nosaltres</h2>
+
+        <div class="contenedor-video">
+          <video id="miVideo" muted>
+            <source src="video/bar.mp4" type="video/mp4" />
+          </video>
+
+          <div class="bnt-video">
+            <span class="material-icons" onclick="playVideo()">
+              play_circle
+            </span>
+
+            <span class="material-icons" onclick="pauseVideo()">
+              pause_circle
+            </span>
+
+            <span class="material-icons" onclick="volumenVideo()">
+              volume_up
+            </span>
+
+            <span class="material-icons" onclick="muteVideo()">
+              volume_off
+            </span>
           </div>
         </div>
       </section>
@@ -223,4 +249,48 @@
       <p class="footer-copyright">© Alevoso Bar Barcelona</p>
     </footer>
   </body>
+  <script>
+    var video = document.getElementById("miVideo");
+
+    function playVideo() {
+      video.play();
+    }
+
+    function pauseVideo() {
+      video.pause();
+    }
+
+    function volumenVideo() {
+      video.muted = false;
+      video.volume = 1;
+      video.play();
+    }
+
+    function muteVideo() {
+      video.volume = 0;
+    }
+
+    window.onscroll = function () {
+      shrinkNavbar();
+      playScrollVideo();
+    };
+
+    function shrinkNavbar() {
+      var navbar = document.querySelector(".nav-menu");
+
+      if (document.documentElement.scrollTop > 80) {
+        navbar.classList.add("shrink");
+      } else {
+        navbar.classList.remove("shrink");
+      }
+    }
+
+    function playScrollVideo() {
+      var posicion = video.getBoundingClientRect();
+
+      if (posicion.top < window.innerHeight && posicion.bottom >= 0) {
+        video.play();
+      }
+    }
+  </script>
 </html>

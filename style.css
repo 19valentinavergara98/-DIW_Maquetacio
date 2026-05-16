@@ -18,17 +18,32 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  transition: 0.3s;
+}
+/*animacion nav*/
+.nav-menu.shrink {
+  padding: 5px;
+}
+
+.nav-menu.shrink img {
+  width: 70px;
+}
+
+.nav-menu.shrink h1 {
+  font-size: 2rem;
 }
 
 .nav-menu img {
   width: 100px; /* Ancho del nav */
   height: auto;
+  transition: 0.3s;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
   gap: 10px; /* separación entre logo y texto */
+  transition: 0.4s; /*este codigo es para hacer efecto shrink*/
 }
 
 .logo-container h1 {
@@ -37,6 +52,7 @@ body {
   font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 900; /* con esto le doy especie de bold a la letras*/
+  transition: 0.3s;
 }
 
 .ul-menu {
@@ -73,9 +89,15 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  filter: brightness(
-    0.6
-  ); /* esto genera un filtro oscuro para resaltar el parrafo*/
+}
+
+.container-secundario::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .text-img {
@@ -83,14 +105,30 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgb(0, 0, 0);
   text-align: center;
+
+  animation-name: myAnimation;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
 }
 
 .text-img h2 {
   font-size: 2.5rem;
   font-weight: 600;
   letter-spacing: 2px;
+}
+
+@keyframes myAnimation {
+  0% {
+    opacity: 0;
+    top: 60%;
+  }
+
+  100% {
+    opacity: 1;
+    top: 50%;
+    color: white;
+  }
 }
 
 /* boton reservar*/
@@ -203,9 +241,10 @@ body {
 .img:nth-child(8) img {
   filter: brightness(0.6); /* filtro oscuro para las imagenes*/
 }
-
+/*utilizo scale para realizar un pequeño zoom cuando pase por encima de la imagen*/
 img:hover {
-  box-shadow: 0 0 2px 1px rgba(255, 12, 12, 0.789); /*cuando paso por encima se ilumina la imagen*/
+  box-shadow: 0 0 2px 1px rgba(255, 12, 12, 0.789);
+  transform: scale(1.03); /*cuando paso por encima se ilumina la imagen*/
 }
 
 /*seccion reservar dia y hora */
@@ -343,4 +382,51 @@ a {
   .footer-content {
     flex-direction: column; /*el contenido:links, iconos, aparezcan en columna*/
   }
+}
+
+/*video*/
+
+.video {
+  /*
+  max-width: 900px;
+  margin: 0 auto;*/
+  padding: 40px;
+  text-align: center;
+}
+.video h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+.contenedor-video {
+  position: relative;
+  display: inline-block;
+}
+
+.video video {
+  width: 400px;
+  border-radius: 10px;
+  display: block;
+}
+
+.bnt-video {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: rgba(80, 79, 79, 0.4);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.bnt-video span {
+  color: white;
+  cursor: pointer;
+}
+
+.bnt-video span:hover {
+  box-shadow: 0 0 5px white;
 }
